@@ -11,6 +11,17 @@ class Program
     //params in a method. Params are optional 
     static void Main(string[] args)
     {
+  
+        Console.WriteLine(Calculate());
+        Console.Read();
+
+        string friend1 = "Chris";
+        string friend2 = "Kim";
+        string friend3 = "Stephanie";
+
+        GreetFriend(friend1, friend2, friend3);
+  
+
         WriteSomething();
         WriteSomethingSpecific("I am an argument and called from a method");
         Console.WriteLine(Add(15, 31));
@@ -18,6 +29,13 @@ class Program
         Console.WriteLine(Divide(25, 13));
         Console.Read();
         //Method Body
+    }
+
+    public static void GreetFriend(string friendName, string friendName2, string friendName3)
+    {
+        Console.WriteLine("Hi " + friendName + " , my friend!");
+        Console.WriteLine("Hi " + friendName2 + " , my friend!");
+        Console.WriteLine("Hi " + friendName3 + " , my friend!");
     }
 
     public static void WriteSomething() //access modifier (static) return type method name
@@ -46,6 +64,21 @@ class Program
     public static double Divide (double num1, double num2)
     {
         return num1 / num2; 
+    }
+
+    public static int Calculate()
+    {
+        Console.WriteLine("Please enter the first number");
+        string numberInput = Console.ReadLine();
+
+        Console.WriteLine("Please enter second number");
+        string number2Input = Console.ReadLine();
+
+        int number1 = int.Parse(numberInput);
+        int number2 = int.Parse(number2Input);
+
+        int result = number1 + number2;
+        return result;
     }
 }
 
