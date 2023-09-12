@@ -11,9 +11,45 @@ class Program
     //params in a method. Params are optional 
     static void Main(string[] args)
     {
-  
+
+        //Try/Catch/Finally example:
+
+        int tryNum1 = 5;
+        int tryNum2 = 0;
+        int tryResult;
+        try
+        {
+            tryResult = tryNum1 / tryNum2;
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("Cannot divide by zero");
+        }
+
+        Console.WriteLine("Please Enter a Number:");
+        string userInput = Console.ReadLine();
+        try
+        {
+            int userInputInt = int.Parse(userInput);
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Format exception. Please enter correct type.");
+        }
+        catch (OverflowException)
+        {
+            Console.WriteLine("Overflow Exception. The number is too long or too short for int32.");
+        }
+        catch (ArgumentNullException)
+        {
+            Console.WriteLine("ArgumentNullException. The value was empty(null).");
+        }
+        finally
+        {
+            Console.WriteLine("This will be called anyways.");
+        }
         Console.WriteLine(Calculate());
-        Console.Read();
+        
 
         string friend1 = "Chris";
         string friend2 = "Kim";
@@ -29,6 +65,7 @@ class Program
         Console.WriteLine(Divide(25, 13));
         Console.Read();
         //Method Body
+        Console.ReadKey();
     }
 
     public static void GreetFriend(string friendName, string friendName2, string friendName3)
@@ -80,5 +117,8 @@ class Program
         int result = number1 + number2;
         return result;
     }
+
+    //Try/Catch and Finally:
+
 }
 
