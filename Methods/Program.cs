@@ -12,6 +12,40 @@ class Program
     static void Main(string[] args)
     {
 
+        //Operators:
+        int opNum1 = 5;
+        int opNum2 = 3;
+        int opNum3;
+
+        //unary operators:
+        opNum3 = -opNum1;
+        Console.WriteLine("opNum3 is {0}", opNum3);
+
+        bool isCloudy = true;
+        Console.WriteLine("Is it cloudy? {0}", !isCloudy);
+
+        //increment operators:
+        int newNum = 0;
+        newNum++;
+        Console.WriteLine(newNum);
+        //post-increment
+        Console.WriteLine("newNum is {0}", newNum++); //increments after
+        //pre-increment
+        Console.WriteLine("newNum is {0}", ++newNum); //increments before;
+
+        //decrement operators:
+        int decNum = 0;
+        decNum--;
+        Console.WriteLine(decNum);
+        //post-decrement
+        Console.WriteLine("decNum is {0}", newNum++); //decrements after
+        //pre-decrement
+        Console.WriteLine("decNum is {0}", ++newNum); //decrements before;
+
+        //== operator is comparison
+        //conditional operators && ||
+
+
         //Try/Catch/Finally example:
 
         int tryNum1 = 5;
